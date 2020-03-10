@@ -48,10 +48,11 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
-          p.birthdate = patient.birthDate;
+          p.birthdate = dobString;
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
+          p.age = parseInt(calculateAge(dob));
           p.height = getQuantityValueAndUnit(height[0]);
           
           if(typeof height[0] != 'undefined' && typeof height[0].valueQuantity.value != 'undefined' && typeof height[0].valueQuantity.unit != 'undefined') {
